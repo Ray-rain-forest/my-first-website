@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>认识虚拟歌姬-首页</title>  
+    <style>
+        /* 背景样式 */
+        body {
+            width: 100vw;
+            background-image: url("images/IMG_2318.JPG"); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+        }
+
+        /* 导航栏样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #f4f3f3;
+        }
+        .navbar {
+            background-color: #2c3e50;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .nav-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-menu li a {
+            font-size: 16px;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .nav-menu li a:hover {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+        }
+
+        /* 底部人物图片上浮效果 */
+        .characters {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 0 50px 10px;
+            z-index: 5;
+        }
+        .character {
+            position: relative;
+            height: 600px; 
+            opacity: 0;
+            transform: translateY(100%);
+            animation: floatUp 1.2s ease-out forwards;
+        }
+        .character img {
+            height: 100%;
+            object-fit: contain;
+        }
+        /* 人物依次浮现延迟 */
+        .character:nth-child(1) { animation-delay: 0.3s; }
+        .character:nth-child(2) { animation-delay: 0.6s; }
+        .character:nth-child(3) { animation-delay: 0.9s; }
+        .character:nth-child(4) { animation-delay: 1.2s; } 
+
+        /* 上浮动画 */
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏主体 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">虚拟歌姬百科</a>
+            <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="culture.html">文化产业</a></li>
+      <li><a href="technology.html">技术解析</a></li>
+      <li><a href="history.html">历史发展</a></li>
+      <li><a href="worldGJ.html">全球歌姬</a></li>
+      <li><a href="masterpiece.html">作品赏析</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 底部人物图片区域 -->
+    <div class="characters">
+        <div class="character">
+            <img src="images/cywl1.webp" alt="初音未来">
+        </div>
+        <div class="character">
+            <img src="images/jingyin.webp" alt="镜音">
+        </div>
+        <div class="character">
+            <img src="images/LG.webp" alt="流歌">
+        </div>
+        <div class="character">
+            <img src="images/dajie.webp" alt="MEIKO">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>我的网站 - 全球歌姬</title>
+  <style>
+    /* 背景模糊层样式 */
+
+    .bg-blur {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("images/IMG_2318.JPG"); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: blur(100px);
+      z-index: -1;
+    }
+
+    /* 全局初始化样式 */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* 标题样式 */
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+    h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    /* 导航栏样式 */
+
+    .navbar {
+      background-color: #2c3e50;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .nav-logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-menu {
+      display: flex;
+      gap: 30px;
+    }
+    .nav-menu li a {
+      font-size: 16px;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+    }
+    .nav-menu li a:hover {
+      color: #3498db;
+      border-bottom: 2px solid #3498db;
+    }
+    /* 歌姬卡片样式 */
+    .singer-card {
+      max-width: 800px; 
+      margin: 0 auto 50px; 
+      display: flex;
+      flex-direction: column; /* 垂直排列 */
+      align-items: center; 
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    }
+    .singer-card img {
+      width: 300px; 
+      margin-bottom: 20px; /* 图片和文字之间的间距 */
+      border-radius: 4px; 
+    }
+
+    /* 内容区顶部间距 */
+    .content {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    /* 页脚样式 */
+    footer {
+      text-align: center; 
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 背景模糊层 -->
+  <div class="bg-blur"></div>
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">虚拟歌姬百科</a>
+      <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="culture.html">文化产业</a></li>
+      <li><a href="technology.html">技术解析</a></li>
+      <li><a href="history.html">历史发展</a></li>
+      <li><a href="worldGJ.html">全球歌姬</a></li>
+      <li><a href="masterpiece.html">作品赏析</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 核心内容区 -->
+  <div class="content">
+    <h1>虚拟歌姬介绍</h1>
+
+    <!-- 1. 初音未来 -->
+    <div class="singer-card">
+      <img src="images/cywl.webp" alt="初音未来">
+      <h2>1. 初音未来</h2>
+      <p>初音未来（はつね みく、初音ミク、Hatsune Miku），是日本Crypton Future Media公司以雅马哈Vocaloid的语音合成软件为基础开发的虚拟女性歌手，初始形象由日本插画家‌KEI‌设计，音源由日本声优藤田咲提供，在VOCALOID2中首次登场，中国由上海新创华文化发展有限公司代理。</p>
+    </div>
+
+    <!-- 2. 洛天依 -->
+    <div class="singer-card">
+      <img src="images/luotianyi.webp" alt="洛天依">
+      <h2>2. 洛天依</h2>
+      <p>洛天依（Luo Tianyi）是Vsinger旗下虚拟歌手，出生于7月12日，是基于语音合成软件VOCALOID系列制作的女性虚拟歌手、虚拟偶像，形象由MOTH参与设计，声源由山新、鹿乃担任，隶属于上海禾念信息科技有限公司，是世界首位中文V家虚拟歌手。洛天依拥有灰色的头发、绿色的眼瞳，身着古色古香的水墨长裙，是一个感性、温柔、细致的少女，擅长用歌声表现自己和他人的感情，她的出现开辟了中国偶像市场新领域，她不仅是一个虚拟形象，更是数字时代新的品牌存在形式。</p>
+    </div>
+
+    <!-- 3. 绊爱 -->
+    <div class="singer-card">
+      <img src="images/ban ai.webp" alt="绊爱">
+      <h2>3. 绊爱</h2>
+      <p>绊爱（キズナアイ）日本虚拟偶像、虚拟主播，角色形象由森仓圆设计，3D模型由Tda制作，Activ8株式会社旗下虚拟艺人。身穿白色为主色的公式服，中间为粉色，手臂套和长筒靴的边沿为黑色蕾丝边，衣服稍短露出肚脐和小蛮腰，背后有着束腰的腰围，发色主色为棕色，用粉色挑染，带有一些未来感，头上绑著会晃动的粉色蝴蝶结发箍，是爱酱的本体；发箍对应名称中的“爱”字，因此设计成双叶的心形样貌。</p>
+      <p>2022年2月，绊爱正式进入“无限期休眠”。</p>
+      <p>2025年2月26日，“休眠”三年的绊爱宣布复出。</p>
+    </div>
+
+    <!-- 4. 镜音双子 -->
+    <div class="singer-card">
+      <img src="images/jingzi.jpeg" alt="镜音双子">
+      <h2>4. 镜音双子</h2>
+      <p>镜音双子（日文：镜音リンレン），指镜音铃（女）和镜音连（男）。两者都是Crypton Future Media以Yamaha的VOCALOID歌声合成引擎为基础，开发贩售的虚拟歌手软件及其角色形象（也是角色主唱系列的第二作。第一作是初音未来，第三作是巡音流歌）。</p>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>© 2025 我的网站 版权所有</p>
+  </footer>
+</body>
+</html>
